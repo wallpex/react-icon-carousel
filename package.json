@@ -1,43 +1,38 @@
 {
   "name": "react-icon-carousel",
   "version": "1.0.0",
-  "description": "Icon carousel for React",
-  "main": "index.js",
-  "peerDependencies": {
-    "react": "^15.5.4"
-  },
-  "dependencies": {
-    "react": "^15.5.4",
-    "webpack": "^2.6.1"
-  },
+  "description": "icon carousel component for react",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "babel ./src --out-dir ./dist -s inline --copy-files"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wallpex/react-icon-carousel.git"
   },
   "keywords": [
-    "react-carousel",
-    "carousel",
-    "icon-carousel"
+    "react",
+    "component",
+    "select"
   ],
-  "author": {
-    "name": "Wallpex dev",
-    "email": "contact@wallpex.com",
-    "url": "https://wallpex.com"
-  },
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/wallpex/react-icon-carousel/issues"
   },
+  "homepage": "https://github.com/wallpex/react-icon-carousel#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1"
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.8.6"
   },
-  "homepage": "https://github.com/wallpex/react-icon-carousel"
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "files": [
+    "dist/*"
+  ]
 }
