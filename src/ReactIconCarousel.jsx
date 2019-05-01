@@ -34,7 +34,7 @@ export default class ReactIconCarousel extends Component {
     let prevPrevIndex = prevIndex - 1;
     if (prevPrevIndex < 0) prevPrevIndex = buttons.length - 1;
 
-    buttons.forEach(function (button, index) {
+    buttons.forEach(function(button, index) {
       button.selected = false;
 
       if (index === newIndex) {
@@ -65,62 +65,64 @@ export default class ReactIconCarousel extends Component {
   }
 
   render() {
-    const props = this.props
-    const { buttons } = this.state
-    return <div className='chooser cashout-chooser'>
-      <img
-        src='https://wallet.wallpex.com/app-assets/images/daga/LTC_big.png'
-        style={{ visibility: 'hidden', width: '27%', height: 'auto' }}
-        alt='hid'
-      />
-      <button
-        onClick={this.prevCoin}
-        type='button'
-        className=' chooser-next-prev cashout-chooser-prev'
-        style={{
-          marginBottom: 0,
-          marginRight: '1rem',
-          background: 'none',
-          position: 'absolute',
-          top: 'calc(50% - 1rem)',
-          fontSize: '2rem',
-          left: '0',
-          border: 'none',
-        }}
-      >
-        { props.leftButton ? props.leftButton : '<' }
-      </button>
-      {buttons.map((button, index) => (
-        <div
-          id={button.coin + 'button'}
-          key={button.coin + 'button'}
-          className={
-            '' +
-            (button.icon_active || 'none-box') +
-            ' chooserbox box-' +
-            button.coin +
-            '-' +
-            (button.selected ? 'big' : 'small')
-          }
+    const props = this.props;
+    const { buttons } = this.state;
+    return (
+      <div className="chooser cashout-chooser">
+        <img
+          src="https://wallet.wallpex.com/app-assets/images/daga/LTC_big.png"
+          style={{ visibility: 'hidden', width: '27%', height: 'auto' }}
+          alt="hid"
         />
-      ))}
-      <button
-        onClick={this.nextCoin}
-        type='button'
-        className='text-muted btn round chooser-next-prev cashout-chooser-prev'
-        style={{
-          marginBottom: 0,
-          marginRight: '1rem',
-          background: 'none',
-          position: 'absolute',
-          left: 'calc(100% - 2rem)',
-          top: 'calc(50% - 1rem)',
-          fontSize: '2rem',
-          border: 'none',
-        }}
-      >
-        { props.rightButton ? props.rightButton : '>' }
-      </button>
-    </div>
+        <button
+          onClick={this.prevCoin}
+          type="button"
+          className=" chooser-next-prev cashout-chooser-prev"
+          style={{
+            marginBottom: 0,
+            marginRight: '1rem',
+            background: 'none',
+            position: 'absolute',
+            top: 'calc(50% - 1rem)',
+            fontSize: '2rem',
+            left: '0',
+            border: 'none'
+          }}
+        >
+          {props.leftButton ? props.leftButton : '<'}
+        </button>
+        {buttons.map((button, index) => (
+          <div
+            id={button.coin + 'button'}
+            key={button.coin + 'button'}
+            className={
+              '' +
+              (button.icon_active || 'none-box') +
+              ' chooserbox box-' +
+              button.coin +
+              '-' +
+              (button.selected ? 'big' : 'small')
+            }
+          />
+        ))}
+        <button
+          onClick={this.nextCoin}
+          type="button"
+          className="text-muted btn round chooser-next-prev cashout-chooser-prev"
+          style={{
+            marginBottom: 0,
+            marginRight: '1rem',
+            background: 'none',
+            position: 'absolute',
+            left: 'calc(100% - 2rem)',
+            top: 'calc(50% - 1rem)',
+            fontSize: '2rem',
+            border: 'none'
+          }}
+        >
+          {props.rightButton ? props.rightButton : '>'}
+        </button>
+      </div>
+    );
   }
 }

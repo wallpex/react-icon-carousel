@@ -11,11 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/wallpex/react-icon-carousel.git"
   },
-  "keywords": [
-    "react",
-    "component",
-    "select"
-  ],
+  "keywords": [ "react", "component", "select" ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -32,7 +28,5 @@
   "peerDependencies": {
     "react": "^16.8.0"
   },
-  "files": [
-    "dist/*"
-  ]
+  "files": [ "dist/*" ]
 }
