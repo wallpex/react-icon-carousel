@@ -88,7 +88,7 @@ export default class ReactIconCarousel extends Component {
           border: 'none',
         }}
       >
-        { props.rightButton ? props.rightButton : '<' }
+        { props.leftButton ? props.leftButton : '<' }
       </button>
       {buttons.map((button, index) => (
         <div
@@ -119,7 +119,7 @@ export default class ReactIconCarousel extends Component {
           border: 'none',
         }}
       >
-        { props.leftButton ? props.leftButton : '>' }
+        { props.rightButton ? props.rightButton : '>' }
       </button>
     </div>
   }
